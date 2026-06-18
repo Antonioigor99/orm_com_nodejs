@@ -1,5 +1,5 @@
 "use strict";
-
+/** São uteis para desenvolvimento e testes, serve basicamente para preencher o banco de dados com dados fictícios e para testar funcionalidades**/
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {

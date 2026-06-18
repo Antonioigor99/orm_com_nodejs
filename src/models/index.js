@@ -1,5 +1,7 @@
 'use strict';
-
+/** São representação das tabelas do banco de dados em forma de classe
+ *  Nelas definimos a estrutura dos campos e colunas e seus tipos e os relacionamentos entre tabelas
+ * **/
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');

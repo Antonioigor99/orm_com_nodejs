@@ -1,4 +1,5 @@
 'use strict';
+/** Permite controlar as alterações do banco de dados de forma organizada e versionada **/
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
