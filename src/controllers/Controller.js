@@ -13,7 +13,7 @@ class Controller {
       const listaDeRegistro = await this.entidadeService.pegaTodosOsRegistros();
       return res.status(200).json(listaDeRegistro);
     } catch (error) {
-      return res.status(500).json({message: `Erro ao buscar registros`});
+      return res.status(500).json({message: `Erro ao buscar registros ${error.message}`});
     }
   }
   //Esse método é responsável por lidar com uma requisição HTTP para buscar um registro específico da entidade com base no ID fornecido
@@ -67,7 +67,7 @@ class Controller {
   async apagaRegistro(req,res){
     const {id} = req.params;
     try{
-      const registroApagado = await this.entidadeService.apagaRegistro(Number(id));
+      const registroApagado = await this.entidadeService.deletaRegistro(Number(id));
       //aqui verifica se o registro foi apagado com sucesso. se não retorna um 404 com erro de não encontrado.
       if(registroApagado){
         return res.status(200).json({message: `Registro de id ${id} apagado com sucesso`});
